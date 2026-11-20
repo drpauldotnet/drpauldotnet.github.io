@@ -8,7 +8,8 @@ window.SITE = {
   profile: {
     name: "Paul Poinet",
     handle: "pauldotnet",
-    headline: "Product-minded AEC SaaS leader · CDE, openBIM & AI workflows · PhD",
+    headline: "Product-minded AEC SaaS leader",
+    subheadline: "CDE, openBIM & AI workflows · PhD",
     location: "Paris, France",
     photo: "assets/img/profile.jpg",
     banner: "assets/img/cover.jpg",

@@ -16,6 +16,7 @@
         <img class="avatar" src="${esc(p.photo)}" data-fallback="${esc(p.photoFallback || "")}" alt="Portrait of ${esc(p.name)}" width="168" height="168">
         <h1>${esc(p.name)}</h1>
         <p class="headline">${esc(p.headline)}</p>
+        ${p.subheadline ? `<p class="subheadline">${esc(p.subheadline)}</p>` : ""}
         <div class="profile-meta">
           <span>${ICONS.pin}${esc(p.location)}</span>
           <span>${ICONS.briefcase}${esc(currentRole.title + " at " + current.org)}</span>

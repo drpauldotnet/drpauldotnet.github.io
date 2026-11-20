@@ -153,7 +153,8 @@ h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 
   box-shadow: var(--shadow);
 }
 .profile-main h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(36px, 5.5vw, 56px); margin-top: 14px; letter-spacing: -.025em; }
-.profile-main .headline { font-size: clamp(16px, 2vw, 19px); color: var(--ink-2); margin: 6px 0 0; }
+.profile-main .headline { font-size: clamp(17px, 2.1vw, 20px); color: var(--ink); font-weight: 500; margin: 6px 0 0; }
+.profile-main .subheadline { font-size: clamp(15px, 1.8vw, 17px); color: var(--muted); margin: 2px 0 0; }
 .profile-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; color: var(--muted); font-size: 14px; }
 .profile-meta span { display: inline-flex; align-items: center; gap: 6px; }
 .profile-meta svg { width: 15px; height: 15px; }
