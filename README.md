@@ -29,5 +29,37 @@ assets/docs/          Portfolio PDF, PhD thesis, abstract, defence slides
 
 ## Hosting
 
-Any static host works (GitHub Pages, Netlify, Cloudflare Pages, Vercel, or the current host).
-Upload the whole folder; point the `paulpoinet.com` domain at it.
+Hosted on GitHub Pages from the `main` branch of
+[drpauldotnet/drpauldotnet.github.io](https://github.com/drpauldotnet/drpauldotnet.github.io).
+Every push to `main` redeploys the site at <https://drpauldotnet.github.io/> within a minute or two.
+
+```
+git add -A
+git commit -m "Update content"
+git push
+```
+
+### Custom domain (paupoi.net)
+
+1. At the domain registrar, add these DNS records:
+
+   | Type  | Host  | Value |
+   |-------|-------|-------|
+   | A     | `@`   | 185.199.108.153 |
+   | A     | `@`   | 185.199.109.153 |
+   | A     | `@`   | 185.199.110.153 |
+   | A     | `@`   | 185.199.111.153 |
+   | AAAA  | `@`   | 2606:50c0:8000::153 |
+   | AAAA  | `@`   | 2606:50c0:8001::153 |
+   | AAAA  | `@`   | 2606:50c0:8002::153 |
+   | AAAA  | `@`   | 2606:50c0:8003::153 |
+   | CNAME | `www` | drpauldotnet.github.io |
+
+2. Once `nslookup paupoi.net` returns the GitHub IPs, set the domain in
+   **Repo → Settings → Pages → Custom domain** (or
+   `gh api -X PUT repos/drpauldotnet/drpauldotnet.github.io/pages -f cname=paupoi.net`),
+   then tick **Enforce HTTPS** once the certificate is issued.
+3. Recommended: verify the domain under **GitHub → Settings → Pages → Add a domain**
+   so no other account can claim it.
+
+Preview locally with `python -m http.server 8000` (YouTube embeds need http, not file://).
