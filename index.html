@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paul Poinet — AEC SaaS, CDE, openBIM & AI workflows</title>
+  <meta name="description" content="Paul Poinet — product-minded AEC SaaS leader and PhD. 10+ years in design technology and BIM: Common Data Environments, openBIM, AI workflows, on-site AR, computational design and research.">
+  <meta property="og:title" content="Paul Poinet — AEC SaaS, CDE, openBIM & AI workflows">
+  <meta property="og:description" content="Product-minded AEC SaaS leader and PhD — CDE, openBIM and AI workflows at Catenda.">
+  <meta property="og:image" content="assets/img/ICD-ITKE_RP14-15_Process10.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f5f4f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><img src="assets/img/profile.jpg" alt=""><span>Paul Poinet</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#map">Worldwide</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="top"></div>
+
+    <!-- Profile -->
+    <section class="profile">
+      <div class="container">
+        <div class="card profile-card reveal" id="profileCard"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">About</p><h2>Bridging AEC practice and product</h2></div></div>
+        <div class="about-grid">
+          <div class="card about-text reveal" id="aboutText"></div>
+          <aside class="card skills reveal" id="skills" aria-label="Skills"></aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">Career</p><h2 id="arcTitle">Experience & education</h2></div></div>
+        <div class="card arc reveal" id="arc"></div>
+        <div class="cv-grid">
+          <div class="card cv-col reveal"><h3>Experience</h3><div id="experienceList"></div></div>
+          <div class="cv-side">
+            <div class="card cv-col reveal"><h3>Education</h3><div id="educationList"></div></div>
+            <div class="card cv-col reveal" id="certList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section id="map">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Footprint</p><h2>Around the world</h2>
+            <p id="mapSummary">Where I've worked, studied, taught, presented and built. Click a pin, then an entry to jump to it.</p></div>
+          <div class="filters" id="mapFilters" role="group" aria-label="Filter map"></div>
+        </div>
+        <div class="card map-card reveal">
+          <div id="worldMap" role="region" aria-label="Interactive map of international experience"></div>
+          <aside class="map-list" id="mapList" aria-label="Places"></aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Selected work</p><h2>Projects</h2>
+            <p>From on-site AR for SNCF Réseau to open-source AEC tools, research pavilions, fabrication workshops and competition entries — across Paris, Stuttgart, Copenhagen, London and Monterrey.</p></div>
+          <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        </div>
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Research</p><h2>Publications</h2></div>
+          <div class="filters" id="pubLinks"></div>
+        </div>
+        <div class="card pubs reveal" id="pubList"></div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Film</p><h2>Video library</h2>
+            <p>Every video from my Vimeo channel, grouped by theme — research showreels, PhD experiments, Speckle tooling and pavilion documentation.</p></div>
+          <a class="btn" href="https://vimeo.com/user15749707" target="_blank" rel="noopener">Vimeo channel <span id="vmIcon"></span></a>
+        </div>
+        <div id="videoGroups"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="card contact-card reveal" id="contactCard"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span data-year></span> Paul Poinet</span>
+      <span>Built with care — no trackers, no cookies.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="assets/js/map.js"></script>
+</body>
+</html>
